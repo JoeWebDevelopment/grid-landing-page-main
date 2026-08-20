@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #2854FE;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header-container{
+    width: 100%;
+    border-bottom: 1px solid #C1CEFF;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-icon{
+    background: transparent;
+    border: none;
+}
+
+.company-name{
+    position: relative;
+}
+
+.company-name::before{
+    height:8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    content: " ";
+    position: relative;
+    left: -5px;
+    top: -2px;
+    display: inline-block;
+}
