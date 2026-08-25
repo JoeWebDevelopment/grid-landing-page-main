@@ -115,6 +115,77 @@ body{
     display: inline-block;
 }
 
+.primary-nav{
+    position: absolute;
+    width: 675px;
+    background-color: #2854FE;
+    height: 100%;
+    display: block;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 3rem;
+    top: 75px;
+    z-index: 99;
+}
+
+.menu-links-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 160%; /* 51.2px */
+    letter-spacing: -2px;
+    text-align: right;
+    position: relative;
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 77;
+}
+
+
+
+/* Create the hidden underline bar */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color:#fff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+/* Expand the bar on hover */
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
 .main-grid{
     display: grid;
     grid-template-columns: repeat( 2, 1fr);
@@ -215,6 +286,16 @@ footer{
 }
 
 @media (max-width: 765px) {
+    .primary-nav{
+        width: 100%;
+        height: 500px;
+    }
+    .menu-links-list{
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .main-grid{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -248,41 +329,5 @@ footer{
         }
     }
 
-.hidden{
-    display: none;
-}
 
-.primary-nav{
-    position: absolute;
-    width: 675px;
-    background-color: #2854FE;
-    height: 100%;
-    display: block;
-    right: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 3rem;
-    top: 75px;
-}
 
-.menu-links-list{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    align-items: flex-end;
-}
-
-.nav-link{
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 160%; /* 51.2px */
-    letter-spacing: -2px;
-    text-align: right;
-}
