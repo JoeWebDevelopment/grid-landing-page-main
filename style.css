@@ -148,7 +148,7 @@ body{
 
 .hero-text{
     max-width: 397px;
-    font-family: 1.125rem;
+    font-size: 1.125rem;
     font-weight: 400;
 line-height: 165%
 }
@@ -218,13 +218,13 @@ footer{
     .main-grid{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        height: auto;
+        min-block-size: 328px;
     }
         .stats-grid-inner{
             grid-template-columns: 1fr;
             grid-template-rows: auto;
         }
         .stats-card{
-            min-height: 300px;
+            min-block-size: 328px;
         }
     }
